@@ -1,0 +1,25 @@
+load XML
+get all scenes and put scenes in array
+for each scene
+	create new <section> //scene
+	append existing html document's "main" by inserting the following content:
+		if image:
+			extract image(s) path(s)
+			<img> for each image/original slide in the scene
+		if video:
+			extract video(s) path(s)
+			<video> for each video //poster image == filename
+		if audio:
+			extract audio(s) path(s)
+			<audio> for each audio 
+	style <section> to match template
+		get template info
+			number of holes
+			position of holes
+		construct template in scene with <div> and CSS
+		assign element content to holes
+		assign CSS/JS to holes
+			assign onMouseOver reaction
+			assign onMouseClick reaction
+	close <section>
+end

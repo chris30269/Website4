@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<slideshow>
+<scenes>
+	<scene numberOfElements="4">
+		<sceneID>1</sceneID>
+		<images>
+			<image xpos=".1" ypos =".1" xsize=".35" ysize=".35" contentsrc="content/ethanol.png">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+			<image xpos=".55" ypos =".1" xsize=".3" ysize=".1" contentsrc="http://placekitten.com/300/100">
+				<attributes action1="" action2="gotoID(3)" action3="">
+				</attributes>
+			</image>
+			<image xpos=".55" ypos =".3" xsize=".3" ysize=".1" contentsrc="http://placekitten.com/300/100">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+			<image xpos=".55" ypos =".55" xsize=".35" ysize=".35" contentsrc="http://placekitten.com/350/350">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+		</images>
+		<avatar xpos=".1" ypos =".55" xsize=".35" ysize=".35">
+		</avatar>
+		<tree parent="0" right="2" left="0" next="3" prev="0">
+		</tree>
+	</scene>
+	<scene numberOfElements="3">
+		<sceneID>2</sceneID>
+		<images>
+			<image xpos=".55" ypos =".1" xsize=".35" ysize=".2" contentsrc="content/IMG_1217adjusted-pola.jpg">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+			<image xpos=".55" ypos =".4" xsize=".35" ysize=".2" contentsrc="content/IMG_1217adjusted-pola.jpg">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+			<image xpos=".55" ypos =".7" xsize=".35" ysize=".2" contentsrc="content/IMG_1217adjusted-pola.jpg">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+		</images>
+		<avatar xpos=".1" ypos =".1" xsize=".4" ysize=".8">
+		</avatar>
+		<tree parent="0" right="3" left="1" next="3" prev="1">
+		</tree>
+	</scene>
+	<scene numberOfElements="4">
+		<sceneID>3</sceneID>
+		<images>
+			<image xpos=".1" ypos =".1" xsize=".2" ysize=".35" contentsrc="http://placekitten.com/100/100">
+				<attributes action1="glow" action2="fullscreen" action3="">
+				</attributes>
+			</image>
+			<image xpos=".7" ypos =".1" xsize=".2" ysize=".35" contentsrc="http://placekitten.com/200/400">
+				<attributes action1="glow" action2="" action3="">
+				</attributes>
+			</image>
+			<image xpos=".1" ypos =".55" xsize=".2" ysize=".35" contentsrc="http://placekitten.com/200/400">
+				<attributes action1="glow" action2="" action3="">
+				</attributes>
+			</image>
+			<image xpos=".7" ypos =".55" xsize=".2" ysize=".35" contentsrc="http://placekitten.com/200/400">
+				<attributes action1="glow" action2="" action3="">
+				</attributes>
+			</image>
+		</images>
+		<avatar xpos=".35" ypos =".4" xsize=".3" ysize=".8">
+		</avatar>
+		<tree parent="0" right="3" left="2" next="3" prev="2">
+		</tree>
+	</scene>
+</scenes>
+</slideshow>

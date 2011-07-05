@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+  <title>ohai</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+	function getDivByClassName(classname) {
+		divs = document.getElementsByTagName("div");
+		j = 0;
+		out = new Array;
+		for(i=0;i<divs.length;i++) {
+			if (divs.item(i).className.search(classname)>-1) {
+				out[j++] = divs[i];
+			}
+		}
+		return out;
+	}
+	
+	function showHide(id, classname) {
+		x = document.getElementById(id).style.display;
+		/*divs = document.getElementsByTagName("div");
+		j=0;
+		divsOfClass = new Array;
+		for(i=0;i<divs.length;i++) {
+			if (divs.item(i).className.search(classname)>-1) {
+				divsOfClass[j++] = divs[i];
+			}
+		}
+		for(i=0;i<divsOfClass.length;i++) {
+			if (divsOfClass[i].id==id) {
+				divsOfClass[i].style.display = 'block';
+				document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+			}
+			if (divsOfClass[i].id!=id){
+				divsOfClass[i].style.display = 'none';
+				document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+			}
+		}*/
+		if(x=='none'){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+		} else {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+		}
+	}
+  </script>
+  </HEAD>
+  <BODY>
+
+<div class=container>
+	<div class="topbar drop-shadow curved curved-vt-2">	
+		<div class=topelement style="border-color:rgb(0,200,255);"><h1>me</h1></div>
+		<div class=topelement onclick="location.href='resume.html';"><h1>resume</h1></div>
+		<div class=topelement onclick="location.href='projects.html';"> <h1>projects</h1></div>
+		<div class=topelement onclick="location.href='stuff.html';"><h1>stuff</h1></div>
+		<div class=topelement onclick="location.href='lulz.html';"><h1>lulz</h1></div>
+	</div>
+	
+	<div class="main drop-shadow curved curved-vt-2" id="me">
+		<div class=mainleft style="height:100%;">
+			<div class=mainnav id="bionav" style="border-color:rgb(0,200,255);" onclick="showHide('bio', 'maincontent')"><h1>bio</h1></div>
+			<div class=mainnav id="hobbiesnav" onclick="showHide('hobbies', 'maincontent')"><h1>hobbies</h1></div>
+			<div class=mainnav onclick="location.href='http://www.facebook.com/christophersenwilhelm';"><h1>facebook</h1></div>
+			<div class=mainnav onclick="location.href='http://www.twitter.com/chris30269';"><h1>twitter</h1></div>
+		</div>
+		<div class=mainright>
+			<div class=maincontent id="bio">
+			<div style="float:left;margin:15px;margin-top:70px;margin-bottom:20px;border:4px solid;width:50%;height:263px;border-color:rgb(0,200,255);">
+			<img src="http://sphotos.ak.fbcdn.net/hphotos-ak-snc4/hs696.snc4/63640_1507982855917_1124670105_31124133_7818812_n.jpg" style="width:100%;"></img></div>
+			<div class=maincontenttextbox style="width:30%;"><p>ohai</p><p>I am a student at Georgia Tech! I will graduate in December(...ish?) with a Computational Media degree. What's that? 
+			Well, it's a combination of computer science and media theory, which includes graphic design, film, animation, games, and more traditional fare like literature and poetry as well.</p>
+			<p>I am also working on a music minor, which I hope to put to good use in my planned future in a music studio.</p><p>kthxbai</p></div>
+			</div>
+		</div>
+		<div class=mainright style="float:right;margin-right:20px;">
+			<div class=maincontent id="hobbies" style="display:none;">
+				<div style="width:100%;margin-right:auto;margin-left:auto;height:200px;">
+					<div style="float:left;margin:15px;margin-top:40px;border:4px solid;border-color:rgb(0,200,255);width:30%;">
+						<img src="http://www.ibiblio.org/expo/vatican.exhibit/exhibit/e-music/images/music17.jpg" style="width:100%;"></img>
+					</div>
+					<div class=maincontenttextbox style="width:50%; float:left;"><p>I really enjoy singing and music of all kinds. The only music I do not like doesn't do anything interesting or new. A lot of times this is why
+						listening to the radio makes me sad.</p><p>One of my favorite artists ever is MIA. And also Whitney Houston. But let's just keep that between meme and you...</p>
+					</div>
+				</div>
+				<div style="width:100%;margin-right:auto;margin-left:auto;height:380px;">
+					<div style="float:left;margin:15px;border:4px solid;border-color:rgb(0,200,255);width:30%;">
+						<img src="http://lancastria.net/blog/wp-content/uploads/2008/06/the_abyss_lancastria.jpg" style="width:100%;"></img>
+					</div>
+					<div class=maincontenttextbox style="width:50%;margin-top:75px;"><p>I really enjoy movies that take you on a ride. That can mean they make you think (mysteries), take you to a new place (fantasy), 
+						or see the world in a new way (action[That may sound weird, but when I watch an action movie, I tend to see physics and action/consequences. 
+						{Is it curly braces and then brackets?}]). I really just enjoy a good movie.</p>
+						<p>In particular, I have a penchant for underwater thrillers.</p>
+					</div>
+				</div>
+				<div style="width:100%;margin-right:auto;margin-left:auto;">
+				  <div style="float:left;margin:15px;border:4px solid;border-color:rgb(0,200,255);width:30%;margin-top:15px;"><img src="http://www.thewrap.com/files/JonasBrothers.jpg" style="width:100%;"></div>
+                	<div class=maincontenttextbox style="width:50%; float:left; margin-top:65px;"><p>I LOVE terrible renditions of the National Anthem. Like <a href="http://www.youtube.com/watch?v=5e5Z1GewhdY" target="_blank">this</a> one.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  </BODY>
+</HTML>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+  function showHide(id) {
+		x = document.getElementById(id).style.display;
+		//y = document.getElementById(id+'nav').style.display;
+		if(x=='none'){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+		} else {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+		}
+	}
+  </script>
+  </HEAD>
+  <BODY>
+
+<div class=container>
+	<div class="topbar drop-shadow curved curved-vt-2">	
+		<div class=topelement onclick="location.href='index.html';"><h1>me</h1></div>
+		<div class=topelement style="border-color:rgb(0,200,255);"><h1>resume</h1></div>
+		<div class=topelement onclick="location.href='projects.html';"><h1>projects</h1></div>
+		<div class=topelement onclick="location.href='stuff.html';"><h1>stuff</h1></div>
+		<div class=topelement onclick="location.href='lulz.html';"><h1>lulz</h1></div>
+	</div>
+	
+	<div class="main drop-shadow curved curved-vt-2" id="resume">
+		<div class=mainleft>
+			<div class=mainnav id="schoolnav" onclick="showHide('school')"><h1>school</h1></div>
+			<div class=mainnav id="worknav" onclick="showHide('work')"><h1>work</h1></div>
+			<div class=mainnav id="xperiencenav" onclick="showHide('xperience')"><h1>xperience</h1></div>
+			<div class=mainnav id="othernav" onclick="showHide('other')"><h1>other</h1></div>
+		</div>
+		<div class=mainright>
+		
+			<div class=maincontent id="school" style="display:none;">
+			<div class=maincontenttextbox><p>I go to Georgia Tech. It's cool I guess.</p></div>
+			</div>
+		
+			<div class=maincontent id="work" style="display:none;">
+			<div class=maincontenttextbox><p>I work at the GVU.</p></div>
+			<div class=maincontenttextbox><p>I work at the Technique.</p></div>
+			<div class=maincontenttextbox><p>I work at as a TA for CS4590 Computer Audio.</p></div>
+			<div class=maincontenttextbox><p>I basically work my butt off.</p></div>
+			</div>
+			
+			<div class=maincontent id="xperience" style="display:none;">
+			<div class=maincontenttextbox><p>I have done a bunch of stuff.</p></div>
+			</div>
+			
+			<div class=maincontent id="other" style="display:none;">
+			<div class=maincontenttextbox><p>Posso parlare un pochino di italiano.</p></div>
+			<div class=maincontenttextbox><p>Puedo hablar un poquito de espanol.</p></div>
+			<div class=maincontenttextbox><p>I enjoy learning new things.</p></div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  </BODY>
+</HTML>

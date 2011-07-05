@@ -1,0 +1,28 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSS 3D Slideshow</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,600,bold' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	
+	<body>
+		
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div id="main">
+		
+		<script src="js/slideshow.js"></script>
+		<script>
+			initialize();
+		</script>
+		
+		</div>
+		
+	</body>
+</html>

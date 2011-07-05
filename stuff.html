@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+  function showHide(id) {
+		x = document.getElementById(id).style.display;
+		//y = document.getElementById(id+'nav').style.display;
+		if(x=='none'){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+		} else {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+		}
+	}
+  </script>
+  </HEAD>
+  <BODY>
+
+<div class=container>
+	<div class="topbar drop-shadow curved curved-vt-2">	
+		<div class=topelement onclick="location.href='index.html';"><h1>me</h1></div>
+		<div class=topelement onclick="location.href='resume.html';"><h1>resume</h1></div>
+		<div class=topelement onclick="location.href='projects.html';"><h1>projects</h1></div>
+		<div class=topelement style="border-color:rgb(0,200,255);"><h1>stuff</h1></div>
+		<div class=topelement onclick="location.href='lulz.html';"><h1>lulz</h1></div>
+	</div>
+	
+	<div class="main drop-shadow curved curved-vt-2" id="resume">
+		<div class=mainleft>
+			<div class=mainnav id="photographernav" onclick="showHide('photographer')"><h1>photographer</h1></div>
+			<div class=mainnav id="musiciannav" onclick="showHide('musician')"><h1>musician</h1></div>
+			<div class=mainnav id="webmasternav" onclick="showHide('webmaster')"><h1>webmaster</h1></div>
+			<div class=mainnav id="nerdnav" onclick="showHide('nerd')"><h1>nerd</h1></div>
+		</div>
+		<div class=mainright>
+			<div class=maincontent id="photographer" style="display:none;">
+				<div class=maincontenttextbox><p>pixxx</p></div>
+			</div>
+		
+			<div class=maincontent id="musician" style="display:none;">
+				<div class=maincontenttextbox><p>musician</p></div>
+			</div>
+			
+			<div class=maincontent id="webmaster" style="display:none;">
+				<div class=maincontenttextbox><p>webmaster</p></div>
+			</div>
+			
+			<div class=maincontent id="nerd" style="display:none;">
+				<div class=maincontenttextbox><p>nerd</p></div>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  </BODY>
+</HTML>

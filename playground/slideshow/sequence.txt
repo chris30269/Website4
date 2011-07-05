@@ -1,0 +1,20 @@
+click an element
+	look up element's actions
+	if action == onMouseClick:
+		look up action's reaction:
+			if fullscreen:
+				execute fullscreen function
+			if glow:
+				execute glow function
+			if dive:
+				set surrent index to target index-1
+				execute go to next slide function
+					set current slide to CSS class current
+					set past slide to CSS class past
+
+load new presetation
+	execute XMLtoHTML function
+		generate series of scenes from XML
+		set all scenes to CSS class future
+		set first scene to CSS class current
+		define global functions as suggested by XML

@@ -1,0 +1,86 @@
+initialize(){
+load XML
+get all scenes and put in array
+get all images and put in array
+get all avatars and put in array
+make new <div> for avatar so that it is not a child of the scene (<section>)
+initialize old offset and new offset to zero
+for each scene
+	create new <section> (scene)
+		append HTML's "main", open and close <section> tag
+		give section tag id of "scenei" where "i" is the index of the scene
+		update offsets so that only the correct images get put into the correct scenes
+		for each slide:
+			iterate from the old offset to the new offset
+			null out action1, action2 strings
+			get content source path
+			get content x pos
+			get content y pos
+			get content horizontal size
+			get content vertical size
+			get content action1
+			get content action2
+			if action 1 is glow
+				make action1 string be the string that would be inserted into the slide's tag to make it do the appropriate action. This is browser/webkit-readable code.
+			if action 2 is fullscreen:
+				make action2 string be the string that would be inserted into the slide's tag to make it do the appropriate action. This is browser/webkit-readable code.
+			if action 2 is gotoID:
+				make action2 string be the string that would be inserted into the slide's tag to make it do the appropriate action. This is browser/webkit-readable code.
+			reference the "main" of the HTMl and append to it's contents an image tag that contains:
+				an attribute, id, of the form, "imagei" where "i" is the index of the image.
+				an attribute, src, the source path of the image/slide
+				an attribute, originalwidth, the original width of the picture in the scene for when the element is un-fullscreened
+				an attribute, originalheight
+				an attribute, originalx
+				an attribute, originaly
+				an attribute, style, with the location, width, and height of the image
+				and the action1 and action2 strings
+draw avatar
+add event listener for key presses
+add appropriate CSS classes to each scene
+}
+
+drawAvatar(){
+change the location of the avatar by getting it via its ID and then setting it to the location of the new avatar location.
+it's the same image the whole time, just being moved around.
+}
+
+onKeyDown(){
+detects when a key has been pressed and if it is one that we care about then it updates the index
+updates the slides to reflect the updated index
+update past and future history
+}
+
+updateSlides(){
+Select all slides and convert the NodeList result to an array
+if length is not null and is positive:
+	enforce max and minimum index bounds by not letting it be too big or too small
+	set the current slide to be of the CSS class "current"
+	set the future slides to be of the CSS class "future"
+	set the past slides to the of the CSS class "past"
+}
+
+updateHorizontalSlide(){
+update slides
+draw avatar
+updtae history of slides
+}
+
+toggleSize(){
+fullscreens and unfullscreens a clicked image
+get the image opbject
+if the current width of the image is greater than the original width:
+	set the width, height, and location to all the original ones. this unfullscreens the image
+	set the z-index to be the same as the other elements
+else:
+	calculate a ratio of the image's width/height
+	take the smaller ratio and multiply both the width and the height by that ratio
+	set the location of the enlarged image to be at the top left corner so it fills the screen
+	set the z-index of the image to be on top of all other elements
+}
+
+gotoID(){
+exactly updateSlides, but hard-coded to be parent (horizontal slide) and not a child (vertical) slide.
+draw avatar
+update history
+}

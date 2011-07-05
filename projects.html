@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+  function showHide(id) {
+		x = document.getElementById(id).style.display;
+		//y = document.getElementById(id+'nav').style.display;
+		if(x=='none'){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+		} else {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+		}
+	}
+  </script>
+  </HEAD>
+  <BODY>
+
+<div class=container>
+	<div class="topbar drop-shadow curved curved-vt-2">	
+		<div class=topelement onclick="location.href='index.html';"><h1>me</h1></div>
+		<div class=topelement onclick="location.href='resume.html';"><h1>resume</h1></div>
+		<div class=topelement style="border-color:rgb(0,200,255);"><h1>projects</h1></div>
+		<div class=topelement onclick="location.href='stuff.html';"><h1>stuff</h1></div>
+		<div class=topelement onclick="location.href='lulz.html';"><h1>lulz</h1></div>
+	</div>
+	
+	<div class="main drop-shadow curved curved-vt-2" id="projects">
+		<div class=mainleft id="mainleft">
+			<div class=mainnav id="websitenav" onclick="showHide('website')"><h1>website</h1></div>
+			<div class=mainnav id="playgroundnav" onclick="showHide('playground')"><h1>playground</h1></div>
+		</div>
+		<div class=mainright id="mainright">
+			<div class=maincontent id="website" style="display:none;">
+				<div class=maincontenttextbox><p>This site is under construction. Typical, right?</p></div>
+			</div>
+			<div class=maincontent id="playground" style="display:none;">
+				<div class=maincontenttextbox onclick="location.href='playground/index.html';"><p>Here there be dragons.</p></div>
+			</div>
+			<div id="more">
+			
+				<script type="text/javascript">
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.open("GET","projects.xml",false);
+				xmlhttp.send();
+				xmlDoc=xmlhttp.responseXML;
+				var projects = xmlDoc.getElementsByTagName("project");
+				for (i=0; i<projects.length; i++)
+				{
+					var projecti = '\'project'+i+'\'';
+					document.getElementById("mainright").innerHTML+="<div class='maincontent' id="+projecti+" style='display:none;'><div class=maincontenttextbox style='float:right;width:30%;'><p><b>"+projects[i].getAttribute('class')+"</b></p><p>"+projects[i].getAttribute('description')+"</p></div><div class=maincontenttextbox style='float:left;width:45%;'><iframe src="+projects[i].getAttribute('link')+"></iframe></div>";
+					document.getElementById("mainleft").innerHTML+="<div style='height:auto;' class='mainnav' id='project"+i+"nav' onclick='showHide(\"project"+i+"\");'><h1>"+projects[i].getAttribute('name')+"</h1></div>";
+					
+				}
+				</script>
+			
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  </BODY>
+</HTML>

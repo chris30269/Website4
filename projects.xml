@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<projects>
+	<!--<project
+		name=""
+		class=""
+		description=""
+		pic=""
+		link=""
+	/>-->
+	<project
+		name="Procedurally Generated Video"
+		class="LCC2700 Introduction to Computational Media"
+		description="Your assignment is to create a demo using Processing. The demo should include procedurally generated visuals and music. Your .pde file cannot be larger than 32k. Nothing over that size limit will be accepted. if you submit a project that has a .pde file over that limit, it will be given a zero. No instantial assets can be used EXCEPT font files. No wav / mp3 / bmp / avi / jpg / etc... files can be used in your project. The point of a demo is to generate the audiovisual experience, so you should focus on creating procedural definitions of both the audio and video. Audio in Processing is not its strong point, but we will make do."
+		pic=""
+		link="http://www.prism.gatech.edu/~cernst3/website4/mypj6/object.html"
+	/>
+	<project
+		name="Georgia Tech Glee Club Website"
+		class="Georgia Tech Glee Club"
+		description="I inherited a framework for the website which I took and restyled to be less offensive to those with eyes. My responsibilites include updating the various aspects of the site, most of which are on the internal side which requires a login. I make a new annopuncements page each week, keep the schedule up-to-date, add learning materials to the archive (which I built), and add and subtract random materials for the members like forms and handouts."
+		pic=""
+		link="http://gleeclub.gatech.edu/"
+	/>
+</projects>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+  function showHide(id) {
+		x = document.getElementById(id).style.display;
+		//y = document.getElementById(id+'nav').style.display;
+		if(x=='none'){
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(0,200,255)';
+		} else {
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(id+'nav').style.borderColor = 'rgb(89,255,200)';
+		}
+	}
+  </script>
+  </HEAD>
+  <BODY>
+
+<div class=container>
+	<div class="topbar drop-shadow curved curved-vt-2">	
+		<div class=topelement onclick="location.href='index.html';"><h1>me</h1></div>
+		<div class=topelement onclick="location.href='resume.html';"><h1>resume</h1></div>
+		<div class=topelement onclick="location.href='projects.html';"><h1>projects</h1></div>
+		<div class=topelement onclick="location.href='stuff.html';"><h1>stuff</h1></div>
+		<div class=topelement style="border-color:rgb(0,200,255);"><h1>lulz</h1></div>
+	</div>
+	
+	<div class="main drop-shadow curved curved-vt-2" id="resume">
+		<div class=mainleft>
+			<div class=mainnav id="youtubesnav" onclick="showHide('youtubes')"><h1>youtubes</h1></div>
+			<div class=mainnav id="comicsnav" onclick="showHide('comics')"><h1>comics</h1></div>
+			<div class=mainnav id="blogsnav" onclick="showHide('blogs')"><h1>blogs</h1></div>
+			<div class=mainnav id="twatsnav" onclick="showHide('twats')"><h1>twats</h1></div>
+		</div>
+		<div class=mainright>
+			<div class=maincontent id="youtubes" style="display:none;padding:10px;">
+				<div class=maincontenttextbox style="width:89%;text-align:center;"><p>Arguably the best youtube vids out there. And there a lot out there, so you're welcome for that.</p></div>
+					<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=CD2LRROpph0');"><h1>Friday/Fried-Egg/The Death of Music</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=H1aNPPj6AAY');"><h1>Futuristic Fashion Predictions</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=t-gNExsPeDU');"><h1>MARTA is dangerous</h1></div>
+					</div>
+					<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=NgWn7zbgxZ4');"><h1>Click here!</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=FVuvAYzsLoM');"><h1>The YES Dance</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=PJYxCSXjhLI');"><h1>Rejected Cartoons</h1></div>
+					</div>
+					<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=oavMtUWDBTM');"><h1>Никита Михалков любит колбасу</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=MqGLHluDoe0');"><h1>Fully Sick Rap</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin:10px;" onclick="window.open('http://www.youtube.com/watch?v=WF9Isd9nP2w');"><h1>Don't Click Here</h1></div>
+					</div>
+			</div>
+			<div class=maincontent id="comics" style="display:none;">
+				<div class=maincontenttextbox style="width:89%;text-align:center;"><p>Comics that make me giggle.</p></div>
+				<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+					<div class=mainnav style="height:auto; float:left;" onclick="window.open('http://www.xkcd.com');"><h1>XKCD</h1></div>
+				</div>
+			</div>
+			<div class=maincontent id="blogs" style="display:none;">
+				<div class=maincontenttextbox style="width:89%;text-align:center;"><p>Blogs that make me giggle.</p></div>
+				<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+					<div class=mainnav style="height:auto; float:left;" onclick="window.open('http://www.http://hyperboleandahalf.blogspot.com/.com');"><h1>Hyperbole and a Half</h1></div>
+				</div>
+			</div>
+			<div class=maincontent id="twats" style="display:none;">
+				<div class=maincontenttextbox style="margin:25 auto;width:89%;text-align:center;"><p>These people are really funny on Twitter.</p></div>
+					<div style="width:100%; height:auto; margin:25 auto;border:0px solid black;display:block;overflow:hidden;">
+						<div class=mainnav style="height:auto; float:left; margin-left:auto;margin-right:auto;margin:12px;" onclick="window.open('http://twitter.com/docquotes');"><h1>DocQuotes</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin-left:auto;margin-right:auto;margin:12px;" onclick="window.open('http://twitter.com/UNTRESOR');"><h1>NSFW</h1></div>
+						<div class=mainnav style="height:auto; float:left; margin-left:auto;margin-right:auto;margin:12px;" onclick="window.open('http://twitter.com/katefeetie');"><h1>Katiefeetie</h1></div>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+</div>
+
+  </BODY>
+</HTML>
